@@ -1,0 +1,32 @@
+exam_data <- data.frame(
+  name = c("John", "Sarah", "David", "Anna", "Peter"),
+  score = c(85, 92, 76, 88, 69),
+  attempts = c(1, 2, 3, 1, 2),
+  qualify = c("Yes", "Yes", "No", "Yes", "No")
+)
+
+print(exam_data)
+
+print(exam_data$name)
+print(exam_data[1:3, ])
+print(exam_data[, c("name", "score")])
+
+exam_data$grade <- c("A", "A+", "B", "A", "C")
+
+new_row <- data.frame(
+  name = "Mark",
+  score = 95,
+  attempts = 1,
+  qualify = "Yes",
+  grade = "A+"
+)
+
+exam_data <- rbind(exam_data, new_row)
+
+exam_data$percentage <- exam_data$score
+
+exam_data <- exam_data[order(exam_data$score, decreasing = TRUE), ]
+
+print(exam_data)
+
+write.csv(exam_data, "exam_data.csv", row.names = FALSE)
