@@ -1,0 +1,5 @@
+data <- read.csv("C:\\Users\\geeth\\Downloads\\students.csv")
+
+print(data)
+str(data)
+summary(data)
