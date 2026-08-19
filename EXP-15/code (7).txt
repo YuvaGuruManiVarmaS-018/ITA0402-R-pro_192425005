@@ -1,0 +1,40 @@
+data <- iris
+
+print(dim(data))
+print(summary(data))
+
+print(sd(data$Sepal.Length))
+print(sd(data$Sepal.Width))
+print(sd(data$Petal.Length))
+print(sd(data$Petal.Width))
+
+print(quantile(data$Sepal.Length))
+print(quantile(data$Sepal.Width))
+print(quantile(data$Petal.Length))
+print(quantile(data$Petal.Width))
+
+print(aggregate(. ~ Species, data = data, mean))
+
+pivot_table <- aggregate(
+  cbind(Sepal.Length, Sepal.Width, Petal.Length, Petal.Width) ~ Species,
+  data = data,
+  FUN = mean
+)
+
+print(pivot_table)
+
+data$Sepal_Length_Category <- cut(
+  data$Sepal.Length,
+  breaks = c(0, 5, 6, 7, Inf),
+  labels = c("Short", "Medium", "Long", "Very Long")
+)
+
+print(table(data$Sepal_Length_Category))
+
+grouped_data <- aggregate(
+  Sepal.Length ~ Sepal_Length_Category,
+  data = data,
+  FUN = mean
+)
+
+print(grouped_data)
