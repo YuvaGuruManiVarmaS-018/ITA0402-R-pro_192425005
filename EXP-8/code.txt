@@ -1,0 +1,10 @@
+set.seed(123)
+
+x <- rnorm(100, mean = 50, sd = 10)
+
+print(x)
+
+breaks <- seq(floor(min(x)), ceiling(max(x)), by = 5)
+counts <- table(cut(x, breaks = breaks, include.lowest = TRUE))
+
+print(counts)
