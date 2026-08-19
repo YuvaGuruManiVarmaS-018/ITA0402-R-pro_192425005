@@ -1,0 +1,33 @@
+mat1 <- matrix(1:20,
+               nrow = 5,
+               ncol = 4,
+               byrow = TRUE,
+               dimnames = list(
+                 paste("Row", 1:5),
+                 paste("Col", 1:4)
+               ))
+
+cat("\n5 x 4 Matrix (By Row):\n")
+print(mat1)
+mat2 <- matrix(1:9,
+               nrow = 3,
+               ncol = 3,
+               byrow = FALSE,
+               dimnames = list(
+                 c("R1","R2","R3"),
+                 c("C1","C2","C3")
+               ))
+
+cat("\n3 x 3 Matrix (By Column):\n")
+print(mat2)
+mat3 <- matrix(11:14,
+               nrow = 2,
+               ncol = 2,
+               byrow = TRUE,
+               dimnames = list(
+                 c("A","B"),
+                 c("X","Y")
+               ))
+
+cat("\n2 x 2 Matrix:\n")
+print(mat3)
