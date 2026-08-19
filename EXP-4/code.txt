@@ -1,0 +1,12 @@
+v <- 1:12
+
+arr <- array(v,
+             dim = c(3, 4),
+             dimnames = list(
+               Row = c("R1", "R2", "R3"),
+               Col = c("C1", "C2", "C3", "C4")
+             ))
+
+print(arr)
+
+print(arr["R2", "C3"])
