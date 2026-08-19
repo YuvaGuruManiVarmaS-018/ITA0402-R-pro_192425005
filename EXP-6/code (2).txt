@@ -1,0 +1,19 @@
+vec <- c(10, 20, 30, 40)
+
+mat <- matrix(1:9, nrow = 3)
+
+square <- function(x) {
+  x^2
+}
+
+my_list <- list(
+  Vector = vec,
+  Matrix = mat,
+  Function = square
+)
+
+print(my_list)
+
+print(my_list$Vector)
+print(my_list$Matrix)
+print(my_list$Function(5))
