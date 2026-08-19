@@ -1,0 +1,11 @@
+array1 <- array(1:6, dim = c(2, 3))
+array2 <- array(7:12, dim = c(2, 3))
+array3 <- array(13:18, dim = c(2, 3))
+
+print(array1)
+print(array2)
+print(array3)
+
+combined_array <- rbind(array1, array2, array3)
+
+print(combined_array)
