@@ -1,0 +1,13 @@
+data(women)
+
+height_factor <- factor(women$height)
+print(height_factor)
+
+set.seed(123)
+
+letters_sample <- sample(LETTERS[1:5], 10, replace = TRUE)
+letter_factor <- factor(letters_sample)
+
+print(letter_factor)
+print(levels(letter_factor))
+print(table(letter_factor))
